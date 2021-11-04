@@ -9,6 +9,24 @@ module.exports.typeDefs = gql`
     category(id: ID!): Category
   }
 
+  type Mutation {
+    addCategory(input: AddCategoryInput!): Category!
+    addProduct(input: AddProductInput): Product!
+  }
+
+  input AddProductInput {
+    name: String!
+    description: String!
+    quantity: Int!
+    price: Float!
+    onSale: Boolean!
+    image: String!
+  }
+
+  input AddCategoryInput {
+    name: String!
+  }
+
   type Product {
     id: ID!
     name: String!

@@ -3,6 +3,7 @@ const {
   ApolloServerPluginLandingPageGraphQLPlayground,
 } = require("apollo-server-core");
 const { Query } = require("./graphql/resolvers/Query");
+const { Mutation } = require("./graphql/resolvers/Mutation");
 const { Category } = require("./graphql/resolvers/Category");
 const { Product } = require("./graphql/resolvers/Product");
 const { typeDefs } = require("./graphql/schema");
@@ -12,6 +13,7 @@ const resolvers = {
   Query,
   Category,
   Product,
+  Mutation,
 };
 
 const server = new ApolloServer({
